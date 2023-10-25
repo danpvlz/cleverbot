@@ -1,54 +1,44 @@
-# Astro Starter Kit: Basics
+# Cleverbot
 
-```sh
-npm create astro@latest -- --template basics
-```
+[![Cleverbot Screenshot](cleverbot.png)](https://lucky-croquembouche-7e6f9b.netlify.app/)
+## Description
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Cleverbot is a project that implements a design concept found on Dribbble into a static page with Astro. It combines creativity and code to bring a visually appealing user interface to life.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- **Responsive Design:** The project is designed to work flawlessly on various screen sizes, from desktop to mobile.
 
-## 🚀 Project Structure
+- **Performance Metrics:**
+  - **Performance:** Achieves a Lighthouse performance score of 95%.
+  - **Accessibility:** Attains a Lighthouse accessibility score of 100.
+  - **Best Practices:** Meets Lighthouse best practices with a score of 95.
+  - **SEO:** Excels in SEO optimization, earning a Lighthouse score of 100.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Demo
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+[Cleverbot](https://lucky-croquembouche-7e6f9b.netlify.app/)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Getting Started
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+To run this project locally, follow these steps:
 
-Any static assets, like images, can be placed in the `public/` directory.
+1. Clone the repository:
 
-## 🧞 Commands
+   ```bash
+   git clone https://github.com/danpvlz/cleverbot.git
 
-All commands are run from the root of the project, from a terminal:
+2. Enter the project
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```bash
+   cd cleverbot
 
-## 👀 Want to learn more?
+3. Install dependencies
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   ```bash
+   pnpm install
+
+4. Start project
+
+   ```bash
+   pnpm run dev
