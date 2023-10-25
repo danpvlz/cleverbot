@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Development of figma design: Cleverbot" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body
+    class="bg-pink text-theme-purple-dark min-h-screen flex flex-col justify-center items-center p-5 relative"
+  >
+    <a
+      href="https://dribbble.com/shots/21479843-CleverBot-AI-Landing-Page-Hero-Header"
+      target="_blank"
+      rel="noreferrer"
+      class="text-theme-purple text-bold underline bottom-0 text-sm absolute bg-white-pinkish bg-opacity-60 right-0 p-4 rounded-tl-3xl z-20 shadow-md  transition-all duration-200 backdrop-blur-sm"
+    >
+      Development of figma design: Cleverbot
+    </a>
+    <slot />
+  </body>
+</html>

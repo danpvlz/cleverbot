@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/Logo.astro";
+import Info from "../components/Info.astro";
+import Indicators from "../components/Indicators.astro";
+import { Image } from "astro:assets";
+import machine from "../assets/machine.png";
+import machinesm from "../assets/machinesm.png";
+import Button from "../components/Button.astro";
+import Prompt from "../components/Prompt.astro";
+---
+
+<Layout title="Cleverbot">
+  <main
+    class="relative max-w-5xl bg-gradient-to-r from-white-pinkish to-white-pinkish-dark w-full rounded-4xl p-3 grid grid-cols-1 md:grid-cols-2 min-h-[700px]"
+  >
+    <div class="block md:hidden absolute inset-3 opacity-30">
+      <Image
+        src={machinesm}
+        alt="AI machine small"
+        class="h-full object-cover rounded-4xl"
+      />
+    </div>
+    <div
+      class="flex flex-col gap-5 justify-between p-10 md:px-16 md:py-12 z-10 pb-24 md:pb-12"
+    >
+      <Logo size="35" />
+      <Info />
+      <Indicators />
+      <Prompt className="flex md:hidden" />
+    </div>
+    <div class="h-full rounded-4xl relative hidden md:block">
+      <Button
+        className="absolute top-4 right-4 from-[#8e67fe] to-[#7b53eb] shadow-box-theme-purple"
+      />
+      <Image
+        src={machine}
+        alt="AI machine"
+        class="h-full object-cover rounded-4xl"
+      />
+      <Prompt />
+    </div>
+  </main>
+</Layout>

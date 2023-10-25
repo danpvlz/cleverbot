@@ -1,0 +1,50 @@
+---
+import { Image } from "astro:assets";
+import { twJoin } from "tailwind-merge";
+
+interface Props {
+  src?: ImageMetadata;
+  title: string;
+  background: string;
+  className?: string;
+}
+
+const { src, title, background, className } = Astro.props;
+---
+
+<div
+  class={twJoin(
+    "bg-white w-10 h-10 p-[5px] rounded-full overflow-hidden",
+    className,
+  )}
+>
+  <div
+    class={twJoin(
+      "w-full h-full rounded-full overflow-hidden hover:scale-105 transition-all duration-150 cursor-pointer",
+      src ? "pt-1" : "flex items-center justify-center",
+      background
+    )}
+  >
+    {
+      src ? (
+        <Image src={src} alt={title} title={title} />
+      ) : (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="text-white"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          stroke-width="2"
+          stroke="currentColor"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M13 3l0 7l6 0l-8 11l0 -7l-6 0l8 -11" />
+        </svg>
+      )
+    }
+  </div>
+</div>

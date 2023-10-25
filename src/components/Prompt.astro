@@ -1,0 +1,43 @@
+---
+import Logo from "./Logo.astro";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<div
+  class={twMerge(
+    "absolute bottom-6 inset-x-6 bg-white-pinkish rounded-xl bg-opacity-70 backdrop-blur-xl shadow-prompt-shadow p-[5px] pl-2 flex justify-between",
+    className
+  )}
+>
+  <div class="flex items-center gap-4">
+    <Logo size="22" />
+    <p class="font-semibold text-sm hidden sm:block">Ai is generating...</p>
+  </div>
+  <div class="bg-white flex items-center gap-8 py-2 pr-2 pl-4 rounded-lg">
+    <p class="font-bold text-xs">Prompt</p>
+    <button
+      title="Open prompt"
+      class="bg-theme-purple-dark text-white w-5 h-5 flex items-center justify-center rounded-full"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 15L12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9"></path>
+      </svg>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+---
+interface Props {
+  size: string;
+}
+const { size } = Astro.props;
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  viewBox="0 0 96 96"
+>
+  <g transform="translate(-890 -512)">
+    <rect
+      width="96"
+      height="96"
+      rx="31"
+      transform="translate(890 512)"
+      fill="#774fe9"></rect>
+    <path
+      d="M33,16.5a16.5,16.5,0,0,1-33,0Z"
+      transform="translate(904 551)"
+      fill="#fff"></path>
+    <path
+      d="M33,16.5a16.5,16.5,0,0,1-33,0Z"
+      transform="translate(939 551)"
+      fill="#fff"></path>
+  </g>
+</svg>

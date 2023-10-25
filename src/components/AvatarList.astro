@@ -1,0 +1,39 @@
+---
+import avatar1 from "../assets/avatars/avatar1.png";
+import avatar2 from "../assets/avatars/avatar2.png";
+import avatar3 from "../assets/avatars/avatar3.png";
+import Avatar from "./Avatar.astro";
+
+const list = [
+  {
+    src: avatar1,
+    title: "Avatar 1",
+    background: "bg-orange-400",
+  },
+  {
+    src: avatar2,
+    title: "Avatar 2",
+    background: "bg-green-400",
+  },
+  {
+    src: avatar3,
+    title: "Avatar 3",
+    background: "bg-violet-400",
+  },
+  {
+    title: "See more",
+    background: "bg-theme-purple",
+  },
+];
+---
+
+<div class="flex group">
+  {
+    list.map((item, i) => (
+      <Avatar
+        {...item}
+        className={i>0 ? '-ml-4' : ''}
+      />
+    ))
+  }
+</div>
